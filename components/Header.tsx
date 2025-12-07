@@ -1,5 +1,5 @@
 "use client";
-import { Activities } from "@/lib/Data";
+import { Activities } from "@/lib/Logic";
 import { ArrowBigDown, ArrowDown01Icon, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { act, useState } from "react";
