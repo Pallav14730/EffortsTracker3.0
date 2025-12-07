@@ -7,7 +7,7 @@ import { useState } from "react";
 function Header() {
   const [activeTab, setActiveTab] = useState(1);
   return (
-    <div className="p-2 bg-[#f3f4f6] space-y-4  shadow-md">
+    <div className="p-2 fixed top-0 left-0 z-40 w-full bg-[#f3f4f6] space-y-4   shadow-md">
       <div className="grid grid-cols-7 rounded-xl bg-[#E7ECF6] px-2 py-1">
         {Activities.map((activity) => {
           const isActive = activeTab === activity.id;
