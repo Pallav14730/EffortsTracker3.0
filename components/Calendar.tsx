@@ -81,10 +81,10 @@ export default function CalendarPage() {
     return (
       <div className="flex text-xs font-bold">
         {data.comments && (
-          <div className="text-[10px] flex-1 truncate">{data.comments}</div>
+          <div className="text-md flex-1 truncate">{data.comments}</div>
         )}
         {data.hrs && (
-          <div className="text-[10px]">{data.hrs}</div>
+          <div className="text-md">{data.hrs}</div>
         )}
       </div>
     );
@@ -119,7 +119,7 @@ export default function CalendarPage() {
           headerToolbar={{
             left: "prev,next today",
             center: "title",
-            right: "dayGridMonth,dayGridDay,dayGridWeek,",
+            right: "dayGridMonth,dayGridDay,dayGridWeek",
           }}
           height="100%"
         />
