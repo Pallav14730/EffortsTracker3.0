@@ -60,6 +60,21 @@ export default function CalendarPage() {
     setCurrentTile({ ...tileData, date })
     setModalOpen(true)
   }
+  function handleEventClick(info: any) {
+    const event = info.event;
+    const tileData = event.extendedProps
+
+    setCurrentTile({
+      id: tileData.id,
+      subactivity: event.title,
+      activity: tileData.activity,
+      color: tileData.color,
+      date: event.start,
+    })
+    setComments(tileData.comments || "")
+    setHrs(tileData.hrs || "")
+    setModalOpen(true)
+  }
   function eventContent(eventInfo: any) {
     const data = eventInfo.event.extendedProps;
 
@@ -83,6 +98,7 @@ export default function CalendarPage() {
           initialView="dayGridMonth"
           selectable={true}
           nowIndicator={true}
+          eventClick={handleEventClick}
           eventContent={eventContent}
           eventReceive={handlerReceive}
           droppable={true}
